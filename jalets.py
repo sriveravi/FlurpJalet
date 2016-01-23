@@ -15,18 +15,18 @@ class Jalet:
         if partsDict == None:
             partsDict = OrderedDict()
             partsDict[ 'tailBone'] = ['Parts/tailBone.png', 'Parts/tailBone.png']
-            partsDict[ 'head'] = ['Parts/head0.png', 'Parts/head1.png']
-            partsDict[ 'body'] = ['Parts/body0.png', 'Parts/body1.png']
-            partsDict[ 'button'] = ['Parts/but0.png','Parts/but1.png']
+            partsDict[ 'head'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'body'] = ['Parts/body0.png', 'Parts/body1.png', 'Parts/coverBig.png']
+            partsDict[ 'button'] = ['Parts/but0.png','Parts/but1.png', 'Parts/coverSmall.png']
             partsDict[ 'lEye'] = ['Parts/lEye0.png', 'Parts/lEye1.png']
             partsDict[ 'rEye'] = ['Parts/rEye0.png', 'Parts/rEye1.png']
-            partsDict[ 'lHand'] = ['Parts/lHand0.png', 'Parts/lHand1.png']
-            partsDict[ 'rHand'] = ['Parts/rHand0.png', 'Parts/rHand1.png']
-            partsDict[ 'lAntenna'] = ['Parts/lAnt0.png', 'Parts/lAnt1.png']
-            partsDict[ 'rAntenna'] = ['Parts/rAnt0.png', 'Parts/rAnt1.png']
-            partsDict[ 'lFoot'] = ['Parts/lFoot0.png', 'Parts/lFoot1.png']
-            partsDict[ 'rFoot'] = ['Parts/rFoot0.png', 'Parts/rFoot1.png']
-            partsDict[ 'tail'] = ['Parts/tail0.png', 'Parts/tail1.png']
+            partsDict[ 'lHand'] = ['Parts/lHand0.png', 'Parts/lHand1.png', 'Parts/coverSmall.png']
+            partsDict[ 'rHand'] = ['Parts/rHand0.png', 'Parts/rHand1.png', 'Parts/coverSmall.png']
+            partsDict[ 'lAntenna'] = ['Parts/lAnt0.png', 'Parts/lAnt1.png', 'Parts/coverSmall.png']
+            partsDict[ 'rAntenna'] = ['Parts/rAnt0.png', 'Parts/rAnt1.png', 'Parts/coverSmall.png']
+            partsDict[ 'lFoot'] = ['Parts/lFoot0.png', 'Parts/lFoot1.png', 'Parts/coverSmall.png']
+            partsDict[ 'rFoot'] = ['Parts/rFoot0.png', 'Parts/rFoot1.png', 'Parts/coverSmall.png']
+            partsDict[ 'tail'] = ['Parts/tail0.png', 'Parts/tail1.png', 'Parts/coverSmall.png']
 
         if positions == None:
             positions = { 'head': (0,-170),
