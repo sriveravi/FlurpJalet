@@ -135,19 +135,16 @@ if __name__ == '__main__':
     # make jalet object 
     j = Jalet( )
 
-    # get list of all structures lists for Jalets
+    # get list of all Jalet structures, then draw and save
     allProbList = getProbStruct( nProb = 6, baseVal=0, outVal=1)
-
-    # Make all the jalets
     for struct in allProbList:
         jaletImg = j.draw(struct)
         name = outFolder + 'J' + ''.join(str(x) for x in struct) + '.png'
         print( name)
         jaletImg.save( name )
 
-    # get list of all structures lists for Flurps
+    # get list of all Flurp structures, then draw and save
     allProbList = getProbStruct( nProb = 6, baseVal=1, outVal=0)
-    # Make all the flurps 
     for struct in allProbList:
         jaletImg = j.draw(struct)
         name = outFolder + 'F' + ''.join(str(x) for x in struct) + '.png'
