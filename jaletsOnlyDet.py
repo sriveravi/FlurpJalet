@@ -28,7 +28,7 @@ if __name__ == '__main__':
         struct = [0,2,2,2,2,2,2] 
         jaletImg = j.draw(struct)
         struct[1:] = '?'*6
-        name = outFolder + 'J' + ''.join(str(x) for x in struct) + '_' + str(i1) +   '.png'
+        name = outFolder + 'J_DE_' + ''.join(str(x) for x in struct) + '_' + str(i1) +   '.png'
         print( name)
         jaletImg.save( name )
 
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         struct = [1,2,2,2,2,2,2] 
         jaletImg = j.draw(struct)
         struct[1:] = '?'*6
-        name = outFolder + 'F' + ''.join(str(x) for x in struct) + '_' + str(i1) +  '.png'
+        name = outFolder + 'F_DE_' + ''.join(str(x) for x in struct) + '_' + str(i1) +  '.png'
         print( name)
         jaletImg.save( name )
 

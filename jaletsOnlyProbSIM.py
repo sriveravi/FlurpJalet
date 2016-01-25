@@ -14,13 +14,13 @@ from jalets import *
 if __name__ == '__main__':
 
     # make output folder
-    outFolder=  'FlurpJaletOnlyProb/'
+    outFolder=  'FlurpJaletOnlyProbSIM/'
     if not os.path.exists( outFolder):
         os.mkdir( outFolder)
         
 
     # make jalet object, remove the button part from description
-    j = Jalet( )
+    j = JaletSIM( )
     j.partsDict.pop('button')
 
     # get list of all Jalet structures, then draw and save
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     for struct in allProbList:
         jaletImg = j.draw(struct)
         struct[0] = '?'
-        name = outFolder + 'J_PR_' + ''.join(str(x) for x in struct) + '.png'
+        name = outFolder + 'J_PR_' + ''.join(str(x) for x in struct) + '_SIM.png'
         print( name)
         jaletImg.save( name )
 
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     for struct in allProbList:
         jaletImg = j.draw(struct)
         struct[0] = '?'
-        name = outFolder + 'F_PR_' + ''.join(str(x) for x in struct) + '.png'
+        name = outFolder + 'F_PR_' + ''.join(str(x) for x in struct) + '_SIM.png'
         print( name)
         jaletImg.save( name )
 

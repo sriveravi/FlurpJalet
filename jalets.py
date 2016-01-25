@@ -9,7 +9,10 @@ import os
 
 
 
-class Jalet:
+
+
+
+class Jalet(object):
     def __init__( self, partsDict = None, positions= None  ):
 
         if partsDict == None:
@@ -121,13 +124,34 @@ def centerPos( targetPos, imSize ):
     return (targetPos[0]-imSize[0]/2, targetPos[1]-imSize[1]/2)
 
 
+
+class JaletSIM( Jalet):
+    def __init__(self, partsDict = None, positions= None  ):
+        if partsDict == None:
+            partsDict = OrderedDict()
+            partsDict[ 'tailBone'] = ['Parts/tailBone.png', 'Parts/tailBone.png']
+            partsDict[ 'head'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'body'] = ['Parts/body0_SIM.png', 'Parts/body1_SIM.png', 'Parts/coverBig.png']
+            partsDict[ 'button'] = ['Parts/but0.png','Parts/but1.png', 'Parts/coverSmall.png']
+            partsDict[ 'lEye'] = ['Parts/lEye0.png', 'Parts/lEye1.png']
+            partsDict[ 'rEye'] = ['Parts/rEye0.png', 'Parts/rEye1.png']
+            partsDict[ 'lHand'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'rHand'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'lAntenna'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'rAntenna'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'lFoot'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'rFoot'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+            partsDict[ 'tail'] = ['Parts/head0.png', 'Parts/head1.png', 'Parts/coverSmall.png']
+
+            Jalet.__init__(self, partsDict, positions)
+
 #==============================================================
 #==============================================================
 
 if __name__ == '__main__':
 
     # make output folder
-    outFolder=  'FlurpJaletStd/'
+    outFolder=  'FlurpJalet/'
     if not os.path.exists( outFolder):
         os.mkdir( outFolder)
         
@@ -139,7 +163,7 @@ if __name__ == '__main__':
     allProbList = getProbStruct( nProb = 6, baseVal=0, outVal=1)
     for struct in allProbList:
         jaletImg = j.draw(struct)
-        name = outFolder + 'J' + ''.join(str(x) for x in struct) + '.png'
+        name = outFolder + 'J_' + ''.join(str(x) for x in struct) + '.png'
         print( name)
         jaletImg.save( name )
 
@@ -147,7 +171,7 @@ if __name__ == '__main__':
     allProbList = getProbStruct( nProb = 6, baseVal=1, outVal=0)
     for struct in allProbList:
         jaletImg = j.draw(struct)
-        name = outFolder + 'F' + ''.join(str(x) for x in struct) + '.png'
+        name = outFolder + 'F_' + ''.join(str(x) for x in struct) + '.png'
         print( name)
         jaletImg.save( name )
 
